@@ -1,0 +1,91 @@
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-title {
+  font-style: italic;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 100;
+  color: black;
+  text-align: center;
+}
+
+.upload-form {
+	margin : 10px 30px 10px 80px ;
+	float: left ;
+}
+
+/*.upload-form input {
+	display : none ;
+}*/
+
+.form-separator {
+	float: left ;
+	margin-left:60px ;
+	margin-top: 30px ;
+}
+
+.round-box {
+	border-style: solid ;
+	border-width: 1px ;
+	border-color: #C0C0C0 ;
+	padding: 10px ;
+	margin: 10px ;
+	margin-left: 70px ;
+	margin-bottom : 20px ;
+	width: 988px ;
+	-webkit-border-radius: 10px ;
+	-moz-border-radius: 10px ;
+	border-radius: 10px ;
+	background-color: #FFFFF0 ;
+	font-size: 16px ;
+}
+
+.round-box hr {
+	width: 85% ;
+	color : #E0E0E0 ;
+}
+
+.round-box p {
+	font-size: 20px ;
+	margin: 8px 30px 8px 30px ;
+}
+
+.url-form {
+	margin : 10px 80px 10px 30px ;
+	float: right ;
+	height: 1px ;
+}
+
+.input #urltext {
+    width: 300px ;
+	font-size: 16px ;
+	padding-top: 2px ;
+	border-style: solid ;
+	border-width: 2px ;
+	border-color: #C0C0C0 ;
+	margin-right: 10px ;
+}
+
+
+
+.header-top {
+  border-bottom:1px solid #e8e6e6;
+  background-color:#FFF;
+}
+
+body {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.42857143;
+  color:#333;
+  background-color:#f8f8f8;
+}
