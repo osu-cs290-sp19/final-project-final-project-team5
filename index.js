@@ -41,13 +41,13 @@
    })
  }
 
- function saveImage(url) {
+ /*function saveImage(url) {
    return new Promise(resolve => {
      images.push(url)
      localStorage.setItem('images', JSON.stringify(images))
      setTimeout(() => resolve(), 500)
    })
- }
+ }*/
 
  function refreshPage() {
    window.location.href = window.location.href
