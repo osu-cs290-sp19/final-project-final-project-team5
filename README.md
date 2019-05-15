@@ -10,4 +10,5 @@ login page, upload image, image effects, and like, add comment, share buttons
 example site: http://www.pictriev.com/?lang=en
 
 tutorial video: https://www.youtube.com/watch?v=yn2bSzCGQwA
-need database like bunch of dog pics for recognizing a random dog pic.
+
+this project needs database like bunch of dog pics for recognizing a random dog pic.
