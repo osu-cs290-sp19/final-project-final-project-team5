@@ -33,21 +33,21 @@
    $(imageHtml).appendTo('#imagesContainer')
  })
 
- /*function fetchImages() {
+ function fetchImages() {
    return new Promise(resolve => {
      const images = JSON.parse(localStorage.getItem('images') || '[]')
 
      setTimeout(() => resolve(images), 500)
    })
- }*/
+ }
 
- /*function saveImage(url) {
+ function saveImage(url) {
    return new Promise(resolve => {
      images.push(url)
      localStorage.setItem('images', JSON.stringify(images))
      setTimeout(() => resolve(), 500)
    })
- }*/
+ }
 
  function refreshPage() {
    window.location.href = window.location.href
