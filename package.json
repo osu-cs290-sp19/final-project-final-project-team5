@@ -1,0 +1,28 @@
+{
+  "name": "importantstuff",
+  "version": "1.0.0",
+  "description": "important stuff",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "handlebars": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "superrun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaacMartin151/CS290-Final-Project.git"
+  },
+  "keywords": [
+    "important"
+  ],
+  "author": "The-A-Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsaacMartin151/CS290-Final-Project/issues"
+  },
+  "homepage": "https://github.com/IsaacMartin151/CS290-Final-Project#readme"
+}
