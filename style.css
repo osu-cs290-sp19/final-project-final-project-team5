@@ -1,9 +1,79 @@
 .site-title {
   font-style: italic;
-  margin: 0;
-  padding: 10px 20px;
   font-size: 30px;
   font-weight: 100;
   color: black;
-  text-align: center;
+}
+
+
+.navitem{
+  display: inline-flex;
+}
+
+.navbar-name{
+  margin-left: 18vw;
+}
+
+.navbar-search {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  padding: 0;
+}
+
+.navbar-features{
+  margin-right: 15vw;
+}
+
+#navbar-search-input {
+  padding-left: 5px;
+  font-size: 14px;
+  background-color: #eee;
+  border: 1px solid #dadada;
+  border-radius: 0;
+}
+
+#navbar-search-input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+#navbar-search-button {
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: #343434;
+  cursor: pointer;
+}
+
+#navbar-search-button:hover {
+  color: #319df6;
+}
+
+#navbar-search-button:focus {
+  color: #319df6;
+  outline: none;
+}
+
+#navbar-profile-button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #343434;
+  cursor: pointer;
+}
+
+#navbar-like-button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #343434;
+  cursor: pointer;
+}
+
+#navbar-friend-button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #343434;
+  cursor: pointer;
 }
