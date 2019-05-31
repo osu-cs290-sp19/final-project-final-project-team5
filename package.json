@@ -1,17 +1,20 @@
 {
-  "name": "importantstuff",
+  "name": "Final-Project",
   "version": "1.0.0",
-  "description": "important stuff",
-  "main": "index.js",
+  "description": "CS290-Final-Project Beavstagram",
+  "main": "server.js",
+  "scripts": {
+    "test":  "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "build": "handlebars views/partials/photoCaption.handlebars -f public/photoCaptionTemplate.js",
+    "prestart": "npm run build"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.1.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "superrun"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IsaacMartin151/CS290-Final-Project.git"
