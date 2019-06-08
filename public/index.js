@@ -2,25 +2,7 @@
  * Add your JavaScript to this file to complete the assignment.
  */
 
- window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
- window.UPLOADCARE_EFFECTS = 'crop,rotate,mirror,flip,enhance,sharp,blur,grayscale,invert';
- window.UPLOADCARE_IMAGES_ONLY = true;
- window.UPLOADCARE_PREVIEW_STEP = true;
- window.UPLOADCARE_CLEARABLE = true;
- window.UPLOADCARE_LOCALE_TRANSLATIONS = {
-     buttons: {
-         choose: {
-             files: {
-                 one: 'upload image',
-                 other: 'upload image'
-             },
-             images: {
-                 one: 'upload image',
-                 other: 'upload image'
-             }
-         }
-     }
- };
+window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
  uploadcare.registerTab('preview', uploadcareTabEffects)
 
  const widget = uploadcare.Widget('[role=uploadcare-uploader]')
@@ -52,12 +34,27 @@
  })
 
  function fetchImages() {
-   return new Promise(resolve => {
-     const images = JSON.parse(localStorage.getItem('images') || '[]')
+     return new Promise(resolve => {
+         const images = JSON.parse(localStorage.getItem('images') || '[]')
+         var imagesource = images[images.length - 1];
+         if (!images) {
+             alert("Something went wrong with image processing");
+         } else {
+             console.log("Starting to process image");
+             var photoCardTemplate = Handlebars.templates.photoCaption;
+             var newPhotoCardHTML = photoCardTemplate({
+                 URL: imagesource,
+                 Username: "Billy",
+                 ProfileIcon: "fa fa-user"
+             });
+             var photoCardContainer = document.querySelector('#imagesContainer');
+             photoCardContainer.insertAdjacentHTML('beforeend', newPhotoCardHTML);
+         };
 
-     setTimeout(() => resolve(images), 500)
-   })
+         /*setTimeout(() => resolve(images), 500)*/
+     })
  }
+     
 
  function saveImage(url) {
    return new Promise(resolve => {

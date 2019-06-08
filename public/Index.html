@@ -13,9 +13,11 @@
 
     <link rel="stylesheet" href="style.css" media="screen">
 
+    <script src="photoCaptionTemplate.js" charset="utf-8" defer></script>
     <script src="index.js" charset="utf-8" defer></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.min.js"></script>
     <script src="https://ucarecdn.com/libs/widget-tab-effects/1.x/uploadcare.tab-effects.min.js"></script>
@@ -71,6 +73,28 @@
             </div>
           </div>
         </div>
+
+             <div class="entire-post">
+          <div class="post-header">
+            <div class="user-icon">
+              <i class="fa fa-user"></i>
+            </div>
+            <p class="user-name">
+              <a href="#">Eugene</a>
+            </p>
+          </div>
+          <div class="post-content">
+            <img src="http://placekitten.com/200/300">
+          </div>
+          <div class="post-features">
+            <p class="description">Cute Kitty</p>
+            <div class="features">
+              <button type="button" id="post-like-button"><i class="fa fa-heart"></i></button>
+              <button type="button" id="post-comment-button"><i class="fa fa-comment"></i></button>
+            </div>
+          </div>
+        </div>
+
         </div>
       </div>
 
