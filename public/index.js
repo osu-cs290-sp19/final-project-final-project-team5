@@ -3,6 +3,24 @@
  */
 
  window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
+ window.UPLOADCARE_EFFECTS = 'crop,rotate,mirror,flip,enhance,sharp,blur,grayscale,invert';
+ window.UPLOADCARE_IMAGES_ONLY = true;
+ window.UPLOADCARE_PREVIEW_STEP = true;
+ window.UPLOADCARE_CLEARABLE = true;
+ window.UPLOADCARE_LOCALE_TRANSLATIONS = {
+     buttons: {
+         choose: {
+             files: {
+                 one: 'upload image',
+                 other: 'upload image'
+             },
+             images: {
+                 one: 'upload image',
+                 other: 'upload image'
+             }
+         }
+     }
+ };
  uploadcare.registerTab('preview', uploadcareTabEffects)
 
  const widget = uploadcare.Widget('[role=uploadcare-uploader]')
