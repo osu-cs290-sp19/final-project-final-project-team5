@@ -33,13 +33,13 @@
    $(imageHtml).appendTo('#imagesContainer')
  })
 
- /*function fetchImages() {
+ function fetchImages() {
    return new Promise(resolve => {
      const images = JSON.parse(localStorage.getItem('images') || '[]')
 
      setTimeout(() => resolve(images), 500)
    })
- }*/
+ }
 
  function saveImage(url) {
    return new Promise(resolve => {
