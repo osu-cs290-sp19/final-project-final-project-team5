@@ -1,5 +1,22 @@
 
+#site-title {
+    font-style: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    width: 100%;
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+}
 
+/*NAVBAR--------------------------------------------------*/
+
+/*
 .navitem {
     background-color: darkgoldenrod;
 }
@@ -28,7 +45,6 @@ button {
   margin-left: 15vw;
   margin-right: 15vw;
   padding: 0;
-  position: absolute;
   margin-top: 5px;
 }
 
@@ -89,6 +105,7 @@ button {
   color: #343434;
   cursor: pointer;
 }
+*/
 
 .float-right {
     position: fixed;
@@ -96,37 +113,35 @@ button {
     right: 100px;
 }
 
-
+/* BODY WITH POSTS-----------------------------------------*/
 .container {
     border: 1px solid black;
     height: 10000px;
     width: 10000px;
     background-color: orangered;
-    margin-left: -4px;
-    z-index: 2;
 }
 
 #imagesContainer {
     justify-content: center;
-    z-index: 2;
-}
-
-body {
-    background-color: green;
+	margin: auto;
+	hieght: auto;
+	display: block;
+	margin-top: 100px;
+	
 }
 
 .entire-post {
-    position: relative;
-    top: 150px;
-    width: 300px;
+    position: static;
+    width: 40%;
     height: 500px;
     border: 2px solid black;
     border-radius: 5px;
     background-color: yellow;
-    z-index: 2;
-    display: block;
+	margin: auto;
+	margin-bottom: 2em;
+    
 }
-
+/*
 .post-header {
     display: inline-block;
     position: absolute;
@@ -135,12 +150,15 @@ body {
     height: 10px;
     border-bottom: 2px solid black;
 }
+*/
 
+/*
 .post-content {
     display: inline-block;
     position: absolute;
     top: 50px;
 }
+
 
 img {
     height: 295px;
@@ -184,18 +202,4 @@ img {
     width: 50px;
     height: 50px;
 }
-#site-title {
-    font-style: italic;
-    font-size: 30px;
-    font-weight: 100;
-    text-align: center;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 80px;
-    width: 100%;
-    color: black;
-    border: 1px solid black;
-    background-color: orange;
-    z-index: 3;
-}
+*/
