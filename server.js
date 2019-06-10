@@ -3,6 +3,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
+var data = require('mongo-db-init.json');
 
 var app = express();
 var port = process.env.PORT || 8390;
@@ -27,22 +28,29 @@ app.get('/', function(req, res, next){
   res.status(200).sendFile(__dirname + '/public/login.html');
 });
 
+// app.get('/:personId', function (req, res, next){
+//   var personId = req.params.personId.toLowerCase();
+//   var collection = db.collection('people');
+//   collection.find({personId: personId}).toArray(function(err, people){
+//     if(err){
+//       res.status(500).send({
+//         error: "Error fetching personId from DB"
+//       });
+//     }else if(people.length < 1){
+//       next();
+//     }else{
+//       console.log("== people:", people);
+//       res.status(200).render('mainPage', people[0]);
+//     }
+//   });
+// });
+
 app.get('/:personId', function (req, res, next){
   var personId = req.params.personId.toLowerCase();
-  var collection = db.collection('people');
-  collection.find({personId: personId}).toArray(function(err, people){
-    if(err){
-      res.status(500).send({
-        error: "Error fetching personId from DB"
-      });
-    }else if(people.length < 1){
-      next();
-    }else{
-      console.log("== people:", people);
-      res.status(200).render('mainPage', people[0]);
-    }
-  });
+  res.status(200).render('mainPage', {data});
 });
+
+
 
 app.get('*', function (req, res, next){
   res.status(404).sendFile(__dirname + '/public/404.html');
