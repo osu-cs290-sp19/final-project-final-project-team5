@@ -7,7 +7,7 @@ function redirect(){
 function check(){
   if(document.getElementById('userid').value == "derek" && document.getElementById('pswrd').value == "cs290"){
     //redirect();
-    window.open ('Index.html');
+    window.open ('derek');
   }
   else{
     alert("Check your password or username!")
