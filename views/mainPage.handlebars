@@ -6,7 +6,16 @@
   </div>
 
   <div class="row" id="imagesContainer">
-    {{#each post}}
+    {{#each photo}}
+    <div class="entire-post">
+        <div class="post-header">
+            <div class="user-icon">
+                <i class="{{profileIcon}}"></i>
+            </div>
+            <p class="user-name">
+                <a href="#">{{userName}}</a>
+            </p>
+        </div>
       {{> photoCaption}}
     {{/each}}
   </div>
