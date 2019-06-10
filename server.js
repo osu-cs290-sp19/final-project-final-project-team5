@@ -3,7 +3,7 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
-var data = require('mongo-db-init.json');
+var data = require('./mongo-db-init');
 
 var app = express();
 var port = process.env.PORT || 8390;
@@ -47,7 +47,11 @@ app.get('/', function(req, res, next){
 
 app.get('/:personId', function (req, res, next){
   var personId = req.params.personId.toLowerCase();
-  res.status(200).render('mainPage', {data});
+  if(data[personId]){
+    res.status(200).render('mainPage', data[personId]);
+  }else{
+    next();
+  }
 });
 
 
