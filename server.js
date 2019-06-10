@@ -16,13 +16,32 @@ var mongoDBName = process.env.MONGO_DB_NAME;
 var mongoUrl = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDBName}`;
 var db = null;
 
+app.engine('handlebars',exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
 app.use(express.static('public'));
 
 app.use(bodyParser.json());
 
+app.get('/login', function(req, res, next){
+  res.status(200).sendFile(__dirname + '/public/login.html');
+});
 
-app.get('/', function (req, res, next){
-    res.status(200).render('mainPage', {});
+app.get('/:personId', function (req, res, next){
+  var personId = req.params.personId.toLowerCase();
+  var collection = db.collection('people');
+  collection.find({personId: personId}).toArray(function(err, people){
+    if(err){
+      res.status(500).send({
+        error: "Error fetching personId from DB"
+      });
+    }else if(people.length < 1){
+      next();
+    }else{
+      console.log("== people:", people);
+      res.status(200).render('mainPage', people[0]);
+    }
+  });
 });
 
 app.get('*', function (req, res, next){

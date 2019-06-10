@@ -1,0 +1,17 @@
+[
+  {
+    "personId": "derek",
+    "name": "Derek",
+    "photos": [
+      {
+        "description": "Cute kitty",
+        "url": "http://placekitten.com/200/300"
+      },
+      {
+        "description": "More cute kitty",
+        "url": "http://placekitten.com/200/300"
+      }
+    ],
+    "profileIcon": "fa fa-user"
+  }
+]
