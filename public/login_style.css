@@ -77,10 +77,158 @@ h1{
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
-    color: darkgrey;
+    color: white;
 }
 
 .loginbox a:hover
 {
     color: #ffc107;
+}
+
+
+#create-changepwd-button {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+#create-changepwd-button:focus {
+  outline: none;
+}
+
+#create-account-button {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+#create-account-button:focus {
+  outline: none;
+}
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#create-changepwd-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 500px;
+}
+
+#modal-backdrop-2 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#create-account-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-dialog {
+  width: 320px;
+  height: 345px;
+  margin-top: 50px;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.modal-header {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.modal-body-2 {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+.modal-footer button {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  width: 260px;
+  text-align: center;
+}
+
+.modal-footer .modal-cancel-button:hover {
+  background-color: #ffc107;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-footer .modal-changepwd-button {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.modal-footer .modal-changepwd-button:hover {
+  background-color: #ffc107;
+  color: black;
+  cursor: pointer;
+}
+
+
+.modal-footer .modal-cancel-button-2:hover {
+  background-color: #ffc107;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-footer .modal-account-button {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.modal-footer .modal-account-button:hover {
+  background-color: #ffc107;
+  color: black;
+  cursor: pointer;
 }

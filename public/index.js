@@ -57,13 +57,64 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
      
 
  function saveImage(url) {
-   return new Promise(resolve => {
-     images.push(url)
-     localStorage.setItem('images', JSON.stringify(images))
-     setTimeout(() => resolve(), 500)
-   })
- }
+     return new Promise(resolve => {
+         images.push(url)
+         localStorage.setItem('images', JSON.stringify(images))
+     
+         const imageImport = JSON.parse(localStorage.getItem('images') || '[]')
+         var imagesource = imageImport[images.length - 1];
+
+         if (!imagesource) {
+             alert("Couldn't get the photo");
+         } else {
+
+             var postRequest = new XMLHttpRequest();
+             var User = getPersonIdFromURL();
+             var requestURL = '/' + User  + '/addPhoto';
+             postRequest.open('POST', requestURL);
+
+             var requestBody = JSON.stringify({
+                 url: imagesource,
+                 userName: User,
+                 profileIcon: "fa fa-user",
+                 description: "..."
+             });
+
+             postRequest.addEventListener('load', function (event) {
+                 if (event.target.status === 200) {
+                     var photoCaptionTemplate = Handlebars.templates.photoCaption;
+                     var newPhotoCardHTML = photoCaptionTemplate({
+                         url: imagesource,
+                         userName: User,
+                         profileIcon: "fa fa-user",
+                         description: "..."
+
+
+                     });
+                     var photoCardContainer = document.querySelector('#imagesContainer');
+                     photoCardContainer.insertAdjacentHTML('beforeend', newPhotoCardHTML);
+                 } else {
+                     alert("Error storing photo: " + event.target.response);
+                 }
+             });
+             console.log("Sending post request of " + requestBody);
+             postRequest.setRequestHeader('Content-Type', 'application/json');
+             postRequest.send(requestBody);
+             setTimeout(() => resolve(), 500)
+         }
+     })
+    };
 
  function refreshPage() {
    window.location.href = window.location.href
+ }
+
+ function getPersonIdFromURL() {
+     var path = window.location.pathname;
+     var pathParts = path.split('/');
+     if (pathParts[1]) {
+         return pathParts[1];
+     } else {
+         return null;
+     }
  }
