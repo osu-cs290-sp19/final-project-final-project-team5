@@ -121,6 +121,7 @@ function create_account(){
   }
 
   if(creating_bool == 1){
+    alert("Your account is successfully created !");
     username.push(document.getElementById("account-username-attribution-input").value);
     password.push(document.getElementById("account-password-attribution-input").value);
     document.getElementById("create-account-modal").classList.add('hidden');
