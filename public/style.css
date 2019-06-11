@@ -1,56 +1,63 @@
 
+
+
+
+
+
+/*LINKS ------------------------------------------------*/
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: #319DF6;
+}
+
+
+
+/*NAVBAR--------------------------------------------------*/
+
+
+
 #site-title {
     font-style: sans-serif;
     font-size: 30px;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 80px;
     width: 100%;
     color: white;
-    border: 1px solid black;
-    background-color: black;
+	margin-left: 15%;
+	
 }
 
-/*NAVBAR--------------------------------------------------*/
-
-/*
-.navitem {
-    background-color: darkgoldenrod;
+header{
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	position: fixed;
+	top: 0px;
+	margin-top: 0px;
 }
 
-.headerstuff {
-    background-color: darkgoldenrod;
-    border: 1px solid black;
-}
 
-button {
-    background-color: darkgoldenrod;
-    border: 1px solid black;
+.navlist{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
 .navitem{
-  display: inline-flex;
-  position: fixed;
-  top: 80px;
+	display: inline-block;
+	float: right;
+	margin-right: 3em;
 }
 
-.navbar-name{
-  margin-left: 18vw;
+.headerstuff{
+	margin-right: 0;
 }
 
-.navbar-search {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  padding: 0;
-  margin-top: 5px;
-}
-
-.navbar-features{
-  margin-right: 15vw;
-}
 
 #navbar-search-input {
   padding-left: 5px;
@@ -69,16 +76,16 @@ button {
   font-size: 16px;
   background: none;
   border: none;
-  color: #343434;
+  color: white;
   cursor: pointer;
 }
 
 #navbar-search-button:hover {
-  color: #319df6;
+  color: orange;
 }
 
 #navbar-search-button:focus {
-  color: #319df6;
+  color: white;
   outline: none;
 }
 
@@ -86,7 +93,7 @@ button {
   font-size: 20px;
   background: none;
   border: none;
-  color: #343434;
+  color: white;
   cursor: pointer;
 }
 
@@ -94,7 +101,7 @@ button {
   font-size: 20px;
   background: none;
   border: none;
-  color: #343434;
+  color: white;
   cursor: pointer;
 }
 
@@ -102,10 +109,10 @@ button {
   font-size: 20px;
   background: none;
   border: none;
-  color: #343434;
+  color: white;
   cursor: pointer;
 }
-*/
+
 
 .float-right {
     position: fixed;
@@ -113,12 +120,11 @@ button {
     right: 100px;
 }
 
+
 /* BODY WITH POSTS-----------------------------------------*/
-.container {
-    border: 1px solid black;
-    height: 10000px;
-    width: 10000px;
-    background-color: orangered;
+.container { 
+    background-color: #ff6600;
+	padding: 20px;
 }
 
 #imagesContainer {
@@ -134,72 +140,72 @@ button {
     position: static;
     width: 40%;
     height: 500px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 5px;
-    background-color: yellow;
+    background-color: white;
 	margin: auto;
 	margin-bottom: 2em;
     
 }
-/*
+
+
 .post-header {
-    display: inline-block;
-    position: absolute;
-    margin-top: 0px;
-    margin-left: 0px;
-    height: 10px;
-    border-bottom: 2px solid black;
-}
-*/
-
-/*
-.post-content {
-    display: inline-block;
-    position: absolute;
-    top: 50px;
-}
-
-
-img {
-    height: 295px;
-    width: 295px;
-}
-
-.user-name {
-    position: absolute;
-    margin-left: 50px;
-    font-size: 24px;
-}
-
-.post-features {
-    display: inline-block;
-    position: absolute;
-    font-size: 12px;
-    top: 355px;
-    height: 250px;
-}
-
-.features {
-    margin-top: 84px;
-}
-
-#post-like-button {
-    width: 40px;
-    height: 40px;
-    bottom: 0px;
-}
-
-#post-comment-button {
-    width: 40px;
-    height: 40px;
-    bottom: 0px;
+	width: 80%;
+	margin:auto;
 }
 
 .user-icon {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 50px;
-    height: 50px;
+  display: inline-block;
 }
-*/
+
+.user-name {
+  display: inline-block;
+}
+
+img{
+	width: 100%;
+	height: 300px;
+	object-fit: contain;
+}
+
+.post-content {
+    width: 95%;
+	height: 327px;
+	margin: auto;
+	margin-top: 5%;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 10px;
+}
+
+.description{
+	width: 100%;
+	margin-left: 10%;
+	align-text: center;
+}
+
+#post-like-button {
+	font-size: 16px;
+	background: none;
+	border: none;
+	color: black;
+	cursor: pointer;
+	margin-top: 50px;
+	margin-left:5px;
+}
+#post-comment-button {
+	font-size: 16px;
+	background: none;
+	border: none;
+	color: black;
+	cursor: pointer;
+	margin-top: 50px;
+}
+#post-comment-button:active {
+	color: #ff6600;
+}
+#post-like-button:active {
+	color: #ff6600;
+}
+
+
