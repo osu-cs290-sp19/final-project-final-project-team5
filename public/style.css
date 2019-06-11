@@ -25,8 +25,6 @@ a:hover{
     font-size: 30px;
     font-weight: bold;
     text-align: left;
-    position: fixed;
-    width: 100%;
     color: white;
 	margin-left: 15%;
 	
@@ -81,7 +79,7 @@ header{
 }
 
 #navbar-search-button:hover {
-  color: orange;
+  color: #ff6600;
 }
 
 #navbar-search-button:focus {
@@ -89,30 +87,21 @@ header{
   outline: none;
 }
 
-#navbar-profile-button {
+.headerstuff:focus{
+	border: 0;
+	outline: 0;
+}
+.headerstuff:hover{
+	color: #ff6600;
+}
+
+.headerstuff{
   font-size: 20px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
 }
-
-#navbar-like-button {
-  font-size: 20px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-#navbar-friend-button {
-  font-size: 20px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
 
 .float-right {
     position: fixed;
@@ -142,7 +131,7 @@ header{
     height: 500px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: white;
+    background-color: black;
 	margin: auto;
 	margin-bottom: 2em;
     
@@ -152,14 +141,18 @@ header{
 .post-header {
 	width: 80%;
 	margin:auto;
+	margin-top: 10px;
 }
 
 .user-icon {
   display: inline-block;
+  color: white;
 }
 
 .user-name {
   display: inline-block;
+  text-decoration: none;
+  color: black;
 }
 
 img{
@@ -173,39 +166,52 @@ img{
 	height: 327px;
 	margin: auto;
 	margin-top: 5%;
-	border-top: 2px solid black;
-	border-bottom: 2px solid black;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
 	padding: 10px;
+	background-color: black;
 }
 
 .description{
-	width: 100%;
+	display: block;
+	width: 80%;
+	line-height: 1.5em;
+	height: 3em;
 	margin-left: 10%;
-	align-text: center;
+	color: white;
+	white-space: normal; 
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #post-like-button {
 	font-size: 16px;
 	background: none;
 	border: none;
-	color: black;
+	color: white;
 	cursor: pointer;
-	margin-top: 50px;
-	margin-left:5px;
+	margin-left: 10px;
 }
 #post-comment-button {
 	font-size: 16px;
 	background: none;
 	border: none;
-	color: black;
+	color: white;
 	cursor: pointer;
-	margin-top: 50px;
+	
 }
-#post-comment-button:active {
+#post-comment-button:hover {
 	color: #ff6600;
 }
-#post-like-button:active {
+#post-like-button:hover {
 	color: #ff6600;
 }
-
+#post-comment-button:focus {
+	border: 0;
+	outline: 0;
+}
+#post-like-button:focus {
+	border: 0;
+	outline: 0;
+}
 
