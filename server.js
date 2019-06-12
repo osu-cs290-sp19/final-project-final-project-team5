@@ -92,21 +92,19 @@ app.post('/:person/addPhoto', function (req, res, next) {
     }
 });
 
-app.post('/:person/Like', function (req, res, next) {
-    console.log('OooOooOoh, somebody LIKES someone');
+app.post('/:person/like', function (req, res, next) {
     var person = req.params.person.toLowerCase();
     if (req.body) {
         var collection = db.collection('people');
         var userName = person;
         var imageURL = req.body.Image;
         var Number = req.body.Number;
-        var UserSearch = userName;
-        var Document = collection.find({ userName: "FZeroRacers" });
-        var Searchquery = "photos." + Number + ".Likes";
+        var Searchquery = "photos." + Number + ".like";
+        var Inputquery = "photos." + Number + ".like";
         var Query = {};
-        Query[Searchquery] = UserSearch;
+        Query[Searchquery] = userName;
         console.log("Searchquery is: " + Searchquery);
-        console.log("UserSearch is: " + UserSearch);
+        console.log("UserSearch is: " + userName);
         collection.find(Query).toArray(function (err, people) {
             console.log("people.length: " + people.length);
             if (err) {
@@ -120,20 +118,21 @@ app.post('/:person/Like', function (req, res, next) {
             }
             else if (people.length == 0) {
                 console.log("Nobody's liked it");
+                var Query2 = {};
+                Query2["photos.url"] = imageURL;
+                var Query4 = {};
+                Query4[Inputquery] = userName;
                 collection.updateOne(
-                      { userName: person, "photos.url": imageURL },
-                      { $push: {userName: Query} },
+                      Query2,
+                      { $push: Query4 },
                       function (err, result) {
                           if (err) {
+                              console.log("Error adding the like");
                               res.status(500).send({
                                   error: "Error inserting photo into DB"
                               });
                           } else {
-                              if (result.matchedCount > 0) {
                                   res.status(200).send("Success");
-                              } else {
-                                  next();
-                              }
                           }
                       }
                     );
