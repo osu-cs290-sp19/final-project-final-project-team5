@@ -61,9 +61,27 @@
 				</li>
 
 				<li><button type="button" class ="navitem headerstuff" id="navbar-profile-button"><i class="fa fa-user"></i></button></li>
-				<li><button type="button" class ="navitem headerstuff" id="navbar-like-button"><i class="fa fa-heart"></i></button></li>
-				<li><button type="button" class ="navitem headerstuff" id="navbar-friend-button"><i class="fa fa-users"></i></button></li>
-      </div>
+        <div id="modal-backdrop" class="hidden"></div>
+        <div id="create-profile-modal" class="hidden">
+          <div class="modal-dialog">
+
+            <div class="modal-header">
+              <h3>Beavstagram profile</h3>
+            </div>
+
+            <div class="modal-body">
+              <p>Username</p>
+              <div class="changepwd-username-input-element">
+                <input type="text" id="changepwd-username-attribution-input" placeholder="Enter your username">
+              </div>
+              <p>OSU email</p>
+              <div class="changepwd-input-element">
+                <input type="password" id="changepwd-attribution-input" placeholder="Enter your new password">
+              </div>
+            </div>
+
+          </div>
+        </div>
     </header>
 
       <div class="container">
@@ -90,7 +108,7 @@
           <div class="post-features">
             <p class="description">Cute Kitty</p>
             <div class="features">
-			  <button type="button" id="post-like-button"><i class="fa fa-heart"></i></button>
+			        <button type="button" id="post-like-button"><i class="fa fa-heart"></i></button>
               <button type="button" id="post-comment-button"><i class="fa fa-comment"></i></button>
             </div>
           </div>
@@ -119,7 +137,6 @@
 
         </div>
       </div>
-
 
   </body>
 
