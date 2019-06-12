@@ -1,5 +1,5 @@
 //function for login identification
-var password = ["derek", "tyler", "issac", "eugene"];
+var password = ["derek", "tyler", "isaac", "eugene"];
 var username = ["Derek", "Tyler", "Isaac", "Eugene"];
 
 function redirect(){
