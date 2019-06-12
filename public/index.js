@@ -144,3 +144,31 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
          return null;
      }
  }
+
+ /* modal interaction */
+
+ //change password modal open part (remove hidden)
+ var modal = document.querySelector(".modal");
+ var modal_button = document.querySelector("#navbar-profile-button");
+
+ function remove_hidden(){
+   document.getElementById("create-profile-modal").classList.remove('hidden');
+   document.getElementById("modal-backdrop").classList.remove('hidden');
+ }
+
+ modal_button.addEventListener('click', remove_hidden);
+
+ //change password modal close part (rollback hidden option)
+
+
+ $(document).keydown(function(event) {
+  if (event.keyCode == 27) {
+    document.getElementById("create-profile-modal").classList.add('hidden');
+    document.getElementById("modal-backdrop").classList.add('hidden');
+  }
+});
+
+
+$("#post-like-button").click(function(){
+$("#post-like-button").css({"color":"red"});
+});
