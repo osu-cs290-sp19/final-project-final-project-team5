@@ -216,6 +216,7 @@ img{
 #post-like-button:hover {
 	color: #ff6600;
 }
+
 #post-comment-button:focus {
 	border: 0;
 	outline: 0;
@@ -253,6 +254,7 @@ body::-webkit-scrollbar-thumb {
 	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
 	text-align: center;
 	background-image:url("benny.jpg");
+  z-index: auto;
 }
 
 .uploadcare--widget__button:hover,
@@ -265,4 +267,73 @@ body::-webkit-scrollbar-thumb {
 
 .uploadcare--widget__button:focus {
   outline: none;
+
+}
+
+/* profile modal part */
+
+#navbar-profile-button {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+#navbar-profile-button:focus {
+  outline: none;
+}
+
+
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9990;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#create-profile-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-dialog {
+  position: fixed;
+  top: 20%;
+  left: 100%;
+  width: 320px;
+  height: 345px;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 15px;
+  z-index: 9999;
+}
+
+.modal-header {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+  margin: 0 auto;
+}
+
+.modal-body {
+  padding: 20px;
+  padding-bottom: 0px;
+  color: white;
 }
