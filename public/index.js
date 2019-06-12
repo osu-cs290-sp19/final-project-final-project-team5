@@ -185,5 +185,6 @@ function profile_contents() {
 
 //like button color change by clicking
 $("#post-like-button").click(function(){
+  window.location.reload();
 $("#post-like-button").css({"color":"red"});
 });
