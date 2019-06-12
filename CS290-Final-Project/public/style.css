@@ -1,0 +1,352 @@
+
+
+
+
+
+
+/*LINKS ------------------------------------------------*/
+a, a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover, a:active{
+	color: orange;
+	text-decoration: none;
+}
+
+
+
+/*NAVBAR--------------------------------------------------*/
+
+
+
+#site-title {
+    font-style: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+		margin-left: 15%;
+		margin-bottom: 0px;
+		padding-top: 5px;
+
+}
+
+h1{
+}
+
+header{
+	width: 100%;
+	height: 80px;
+	background-color: black;
+	position: fixed;
+	top: 0px;
+	margin-top: 0px;
+}
+
+
+.navlist{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.navitem{
+	display: inline-block;
+	float: right;
+	margin-right: 3em;
+}
+
+.headerstuff{
+	margin-right: 0;
+}
+
+#navbar-profile-button{
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+#navbar-search-input {
+  padding-left: 5px;
+  font-size: 14px;
+  background-color: #eee;
+  border: 1px solid #dadada;
+  border-radius: 0;
+}
+
+#navbar-search-input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+#navbar-search-button {
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#navbar-search-button:hover {
+  color: #ff6600;
+}
+
+#navbar-search-button:focus {
+  color: white;
+  outline: none;
+}
+
+.headerstuff:focus{
+	border: 0;
+	outline: 0;
+}
+.headerstuff:hover{
+	color: #ff6600;
+}
+
+.headerstuff{
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.float-right {
+    position: fixed;
+    top: 100px;
+    right: 100px;
+}
+
+
+/* BODY WITH POSTS-----------------------------------------*/
+.container {
+    background-color: #ff6600;
+	padding: 20px;
+}
+
+#imagesContainer {
+    justify-content: center;
+	margin: auto;
+	hieght: auto;
+	display: block;
+	margin-top: 100px;
+
+}
+
+.entire-post {
+    position: static;
+    width: 40%;
+    height: 470px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: black;
+	margin: auto;
+	margin-bottom: 2em;
+
+}
+
+
+.post-header {
+	width: 80%;
+	margin:auto;
+	margin-top: 10px;
+}
+
+.user-icon {
+  display: inline-block;
+  color: white;
+	margin-right: 5px;
+}
+
+.user-name {
+  display: inline-block;
+  color: white;
+	text-decoration: none;
+}
+
+img{
+	width: 100%;
+	height: 300px;
+	object-fit: contain;
+}
+
+.post-content {
+    width: 95%;
+	height: 327px;
+	margin: auto;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	padding: 10px;
+	background-color: black;
+}
+
+.description{
+	display: block;
+	width: 80%;
+	line-height: 1.5em;
+	height: 3em;
+	margin-left: 10%;
+	color: white;
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#post-like-button {
+	font-size: 16px;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+	margin-left: 10px;
+}
+#post-comment-button {
+	font-size: 16px;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+
+}
+#post-comment-button:hover {
+	color: #ff6600;
+}
+#post-like-button:hover {
+	color: #ff6600;
+}
+
+#post-comment-button:focus {
+	border: 0;
+	outline: 0;
+}
+#post-like-button:focus {
+	border: 0;
+	outline: 0;
+}
+
+/* scroll bar custom */
+body::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.0);
+  width: 10px;
+  overflow-y:hidden;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Uploadcare widget customize */
+.uploadcare--widget__button{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	height: 60px;
+	width: 60px;
+	border: none;
+	border-radius: 30px;
+	font-size: 35px;
+	color: black;
+	cursor: pointer;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	background-image:url("benny.jpg");
+  z-index: auto;
+}
+
+.uploadcare--widget__button:hover,
+.uploadcare--widget__button:focus {
+  font-size: 35px;
+	background-image:url("benny.jpg");
+	text-align: center;
+	transform: scale(1.1);
+}
+
+.uploadcare--widget__button:focus {
+  outline: none;
+
+}
+
+/* profile modal part */
+
+#navbar-profile-button {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+#navbar-profile-button:focus {
+  outline: none;
+}
+
+
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9990;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#create-profile-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-dialog {
+  position: fixed;
+  top: 20%;
+  left: 100%;
+  width: 320px;
+  height: 345px;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 15px;
+  z-index: 9999;
+}
+
+.modal-header {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 22px;
+  color: white;
+  margin: 0 auto;
+}
+
+.modal-body {
+  padding: 20px;
+  padding-bottom: 0px;
+  color: white;
+}
+
+.profile {
+  margin: 10px;
+  margin-left: 0px;
+}
+
+/* 404 error container */
+
+.error-container{
+margin: 100px;
+text-align: center;
+
+}

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="float-right">
+    <input type="hidden" role="uploadcare-uploader" id="uploadedImage"
+      data-preview-step="true"
+      data-effects="crop,rotate,enhance,sharp,grayscale" />
+  </div>
+
+  <div class="row" id="imagesContainer">
+    {{#each photos}}
+      {{> photoCaption}}
+    {{/each}}
+  </div>
+</div>
