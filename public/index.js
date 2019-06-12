@@ -179,7 +179,7 @@ function profile_contents() {
   }
 }
  var profile_button = document.querySelector("navbar-profile-button");
- profile_button.addEventListener('click', profile_contents);
+ profile_button.addEventListener('click', profile_contents());
 
 //like button color change by clicking
 $("#post-like-button").click(function(){
