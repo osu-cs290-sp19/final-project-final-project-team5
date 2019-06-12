@@ -188,3 +188,8 @@ $("#post-like-button").click(function(){
   window.location.reload();
 $("#post-like-button").css({"color":"red"});
 });
+
+//go back login page
+$("#navbar-signin-button").click(function(){
+  window.location.href = '/public/login.html';
+});
