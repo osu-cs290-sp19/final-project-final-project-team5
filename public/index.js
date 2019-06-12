@@ -10,8 +10,7 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
 
  widget.onUploadComplete(function(info) {
    saveImage(info.cdnUrl).then(() => {
-     $('#uploadedImage').parent().html('<a href="javascript:refreshPage()"></a>')
-     window.location.reload(true);
+     $('#uploadedImage').parent().html('<a href="javascript:refreshPage()">Refresh it!</a>')
    })
  })
 
@@ -55,13 +54,13 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
          /*setTimeout(() => resolve(images), 500)*/
      })
  }
-
+     
 
  function saveImage(url) {
      return new Promise(resolve => {
          images.push(url)
          localStorage.setItem('images', JSON.stringify(images))
-
+     
          const imageImport = JSON.parse(localStorage.getItem('images') || '[]')
          var imagesource = imageImport[images.length - 1];
 
@@ -90,7 +89,6 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
                          profileIcon: "fa fa-user",
                          description: "..."
 
-
                      });
                      var photoCardContainer = document.querySelector('#imagesContainer');
                      photoCardContainer.insertAdjacentHTML('beforeend', newPhotoCardHTML);
@@ -98,7 +96,6 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
                      alert("Error storing photo: " + event.target.response);
                  }
              });
-             console.log("Sending post request of " + requestBody);
              postRequest.setRequestHeader('Content-Type', 'application/json');
              postRequest.send(requestBody);
              setTimeout(() => resolve(), 500)
@@ -108,6 +105,33 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
 
  function refreshPage() {
    window.location.href = window.location.href
+ }
+ var LikeArray = {};
+ var LikeButton = document.querySelectorAll('#post-like-button');
+ for (i = 0; i < LikeButton.length; i++) {
+     j = i;
+     LikeButton[i].addEventListener('click', AddEventListeners(i));
+ }
+
+ function AddEventListeners(i) {
+     return function (event) {
+         console.log("clicked the like button");
+         var AssociatedImage = event.currentTarget.parentNode.parentNode.parentNode.getElementsByClassName('post-content')[0].getElementsByTagName('img')[0].src;
+         console.log("AssociatedImage is " + AssociatedImage);
+         var postRequest = new XMLHttpRequest();
+         var User = getPersonIdFromURL();
+         var requestURL = '/' + User + '/Like';
+         postRequest.open('POST', requestURL);
+         console.log("LikeArray[" + AssociatedImage + "] is: " + i);
+         var requestBody = JSON.stringify({
+             userName: User,
+             Image: AssociatedImage,
+             Number: i
+         });
+         console.log("Sending post request of " + requestBody);
+         postRequest.setRequestHeader('Content-Type', 'application/json');
+         postRequest.send(requestBody);
+     };
  }
 
  function getPersonIdFromURL() {

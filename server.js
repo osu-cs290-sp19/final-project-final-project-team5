@@ -64,7 +64,8 @@ app.post('/:person/addPhoto', function (req, res, next) {
     if (req.body) {
         var collection = db.collection('people');
         var photo = {
-            url: req.body.url
+            url: req.body.Image
+
         };
         collection.updateOne(
           { userName: person },
@@ -75,7 +76,6 @@ app.post('/:person/addPhoto', function (req, res, next) {
                       error: "Error inserting photo into DB"
                   });
               } else {
-                  console.log("== update result:", result);
                   if (result.matchedCount > 0) {
                       res.status(200).send("Success");
                   } else {
@@ -86,6 +86,56 @@ app.post('/:person/addPhoto', function (req, res, next) {
         );
     } else {
         res.status(400).send("Request needs a body with a URL and caption");
+    }
+});
+
+app.post('/:person/Like', function (req, res, next) {
+    console.log('OooOooOoh, somebody LIKES someone');
+    var person = req.params.person.toLowerCase();
+    if (req.body) {
+        var collection = db.collection('people');
+        var userName = person;
+        var imageURL = req.body.Image;
+        var Number = req.body.Number;
+        var UserSearch = userName;
+        var Document = collection.find({ userName: "FZeroRacers" });
+        var Searchquery = "photos." + Number + ".Likes";
+        var Query = {};
+        Query[Searchquery] = UserSearch;
+        console.log("Searchquery is: " + Searchquery);
+        console.log("UserSearch is: " + UserSearch);
+        collection.find(Query).toArray(function (err, people) {
+            console.log("people.length: " + people.length);
+            if (err) {
+                res.status(500).send({
+                    error: "Nobody's liked it yet"
+                });
+                console.log("Error");
+            }
+            else if (people.length >= 1) {
+                console.log("Somebody's liked it");
+            }
+            else if (people.length == 0) {
+                console.log("Nobody's liked it");
+                collection.updateOne(
+                      { userName: person, "photos.url": imageURL },
+                      { $push: { "photos.$.Likes": userName } },
+                      function (err, result) {
+                          if (err) {
+                              res.status(500).send({
+                                  error: "Error inserting photo into DB"
+                              });
+                          } else {
+                              if (result.matchedCount > 0) {
+                                  res.status(200).send("Success");
+                              } else {
+                                  next();
+                              }
+                          }
+                      }
+                    );
+            }
+        });      
     }
 });
 
