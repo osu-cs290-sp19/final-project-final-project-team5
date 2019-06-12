@@ -18,7 +18,7 @@ function check(){
     }
   }
   if(redirect_true == 1){
-    window.open("Index.html");
+    window.open(document.getElementById('userid').value);
   }
   if(redirect_true == 0){
     alert("Check your password or username!");
