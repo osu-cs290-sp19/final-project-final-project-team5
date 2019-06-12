@@ -62,9 +62,13 @@ app.post('/:person/addPhoto', function (req, res, next) {
     var person = req.params.person.toLowerCase();
     if (req.body) {
         var collection = db.collection('people');
+        //Make the first letter of userName uppercase
+        var name = req.body.userName.charAt(0).toUpperCase() + req.body.userName.slice(1);
         var photo = {
-            url: req.body.Image
-
+          userName: name,
+          profileIcon: req.body.profileIcon,
+          description: req.body.description,
+          url: req.body.url
         };
         collection.updateOne(
           { userName: person },
@@ -118,7 +122,7 @@ app.post('/:person/Like', function (req, res, next) {
                 console.log("Nobody's liked it");
                 collection.updateOne(
                       { userName: person, "photos.url": imageURL },
-                      { $push: Query },
+                      { $push: {userName: Query} },
                       function (err, result) {
                           if (err) {
                               res.status(500).send({
