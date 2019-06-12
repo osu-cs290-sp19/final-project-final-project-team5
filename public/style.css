@@ -337,3 +337,8 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 0px;
   color: white;
 }
+
+.profile {
+  margin: 10px;
+  margin-left: 0px;
+}
