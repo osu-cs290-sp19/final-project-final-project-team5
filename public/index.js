@@ -174,9 +174,9 @@ console.log(username);
 function profile_contents() {
   console.log(pathArray[1]);
   if(pathArray[1] == "derek"){
-    $("profile-username-attribution").value = "Derek";
-    $("profile-email-attribution").value = "jeongju@oregnstate.edu";
-    $("profile-where-attribution").value = "South Korea";
+    document.getElementById("profile-username-attribution").value = "Derek";
+    document.getElementById("profile-email-attribution").value = "jeongju@oregnstate.edu";
+    document.getElementById("profile-where-attribution").value = "South Korea";
     console.log("works?");
   }
 }
