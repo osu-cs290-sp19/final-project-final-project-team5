@@ -119,7 +119,7 @@ app.post('/:person/Like', function (req, res, next) {
                 console.log("Nobody's liked it");
                 collection.updateOne(
                       { userName: person, "photos.url": imageURL },
-                      { $push: { "photos.$.Likes": userName } },
+                      { $push: Query },
                       function (err, result) {
                           if (err) {
                               res.status(500).send({
