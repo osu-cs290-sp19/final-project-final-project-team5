@@ -3,9 +3,8 @@
 
 ## Project ideas
 1. Beavstagram
-login page, upload image, image effects, and like, add comment, share buttons
+login page, upload image, image effects
 
-2. Image recognition with tensorflow api
 
 example site: http://www.pictriev.com/?lang=en
 
