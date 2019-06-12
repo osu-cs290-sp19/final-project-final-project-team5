@@ -174,8 +174,9 @@ console.log(username);
 function profile_contents() {
   if(username == "derek"){
     $("profile-username-attribution").value = "Derek";
-    $("profile-username-attribution").value = "jeongju@oregnstate.edu";
-    $("profile-username-attribution").value = "South Korea";
+    $("profile-email-attribution").value = "jeongju@oregnstate.edu";
+    $("profile-where-attribution").value = "South Korea";
+    console.log("works?");
   }
 }
  var profile_button = document.querySelector("#navbar-profile-button");
