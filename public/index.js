@@ -172,7 +172,8 @@ var username = pathArray[1];
 console.log(username);
 
 function profile_contents() {
-  if(username == "derek"){
+  console.log(pathArray[1]);
+  if(pathArray[1] == "derek"){
     $("profile-username-attribution").value = "Derek";
     $("profile-email-attribution").value = "jeongju@oregnstate.edu";
     $("profile-where-attribution").value = "South Korea";
