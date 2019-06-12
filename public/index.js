@@ -147,7 +147,7 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
 
  /* modal interaction */
 
- //change password modal open part (remove hidden)
+ //modal open
  var modal = document.querySelector(".modal");
  var modal_button = document.querySelector("#navbar-profile-button");
 
@@ -158,9 +158,7 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
 
  modal_button.addEventListener('click', remove_hidden);
 
- //change password modal close part (rollback hidden option)
-
-
+ //modal close with esc key
  $(document).keydown(function(event) {
   if (event.keyCode == 27) {
     document.getElementById("create-profile-modal").classList.add('hidden');
@@ -168,7 +166,22 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
   }
 });
 
+//mdoal text part
+var pathArray = window.location.pathname.split('/');
+var username = pathArray[1];
+console.log(username);
 
+function profile_contents() {
+  if(username == "Derek"){
+    $("profile-username-attribution").value = "Derek";
+    $("profile-username-attribution").value = "jeongju@oregnstate.edu";
+    $("profile-username-attribution").value = "South Korea";
+  }
+}
+ var profile_button = document.querySelector("navbar-profile-button");
+ profile_button.addEventListener('click', profile_contents);
+
+//like button color change by clicking
 $("#post-like-button").click(function(){
 $("#post-like-button").css({"color":"red"});
 });
