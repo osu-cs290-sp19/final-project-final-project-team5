@@ -178,8 +178,8 @@ function profile_contents() {
     $("profile-username-attribution").value = "South Korea";
   }
 }
- var profile_button = document.querySelector("navbar-profile-button");
- profile_button.addEventListener('click', profile_contents());
+ var profile_button = document.querySelector("#navbar-profile-button");
+ profile_button.addEventListener('click', profile_contents);
 
 //like button color change by clicking
 $("#post-like-button").click(function(){
