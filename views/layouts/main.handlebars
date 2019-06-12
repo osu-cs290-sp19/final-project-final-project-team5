@@ -60,8 +60,32 @@
 				<button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
 				</li>
 
-				<li><button type="button" class ="navitem headerstuff" id="navbar-profile-button"><i class="fa fa-user"></i></button></li>
-				<li><button type="button" class ="navitem headerstuff" id="navbar-friend-button"><i class="fa fa-users"></i></button></li>
+        <li><button type="button" class ="navitem headerstuff" id="navbar-profile-button"><i class="fa fa-user"></i></button></li>
+        <div id="modal-backdrop" class="hidden"></div>
+        <div id="create-profile-modal" class="hidden">
+          <div class="modal-dialog">
+
+            <div class="modal-header">
+              <h3>Beavstagram profile</h3>
+            </div>
+
+            <div class="modal-body">
+              <p class = "profile">Username</p>
+              <div class="profile-username-input-element">
+                <h5 type="text" id="profile-username-attribution"> </h5>
+              </div>
+              <p class = "profile">OSU email</p>
+              <div class="profile-input-element">
+                <h5 type="text" id="profile-email-attribution"> </h5>
+              <p class = "profile">From where?</p>
+              <div class="profile-input-element">
+                <h5 type="text" id="profile-where-attribution"> </h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
       </div>
     </header>
 
