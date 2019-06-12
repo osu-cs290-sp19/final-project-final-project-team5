@@ -10,7 +10,8 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
 
  widget.onUploadComplete(function(info) {
    saveImage(info.cdnUrl).then(() => {
-     $('#uploadedImage').parent().html('<a href="javascript:refreshPage()">Refresh it!</a>')
+     $('#uploadedImage').parent().html('<a href="javascript:refreshPage()"></a>')
+     window.location.reload(true);
    })
  })
 
@@ -54,13 +55,13 @@ window.UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d'
          /*setTimeout(() => resolve(images), 500)*/
      })
  }
-     
+
 
  function saveImage(url) {
      return new Promise(resolve => {
          images.push(url)
          localStorage.setItem('images', JSON.stringify(images))
-     
+
          const imageImport = JSON.parse(localStorage.getItem('images') || '[]')
          var imagesource = imageImport[images.length - 1];
 
