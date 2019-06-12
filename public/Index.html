@@ -19,25 +19,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.runtime.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.min.js"></script>
-    <script src="https://ucarecdn.com/libs/widget-tab-effects/1.x/uploadcare.tab-effects.min.js"></script>
+
+    <script>
+      UPLOADCARE_PUBLIC_KEY = '0090a8662cb0acacf77d';
+      UPLOADCARE_LOCALE_TRANSLATIONS = {
+        buttons: {
+          choose: {
+            images: {
+                one: ""
+              }
+            }
+          }
+        };
+      UPLOADCARE_EFFECTS = 'crop,rotate,mirror,flip,enhance,sharp,blur,grayscale,invert';
+      UPLOADCARE_IMAGES_ONLY = true;
+      UPLOADCARE_PREVIEW_STEP = true;
+      UPLOADCARE_CLEARABLE = true;
+    </script>
+
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="https://ucarecdn.com/libs/widget-tab-effects/1.x/uploadcare.tab-effects.js"></script>
+
+    <script>
+      uploadcare.registerTab('preview', uploadcareTabEffects)
+    </script>
 
 </head>
 
   <body>
 
     <header>
-		
+
             <h1 id="site-title">Beavstagram</h1>
-			
-			
+
+
 			<ul class="navlist">
-          
+
 				<li class="navitem navbar-search">
 				<input type="text" id="navbar-search-input" placeholder="Search...">
 				<button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
 				</li>
-			
+
 				<li><button type="button" class ="navitem headerstuff" id="navbar-profile-button"><i class="fa fa-user"></i></button></li>
 				<li><button type="button" class ="navitem headerstuff" id="navbar-like-button"><i class="fa fa-heart"></i></button></li>
 				<li><button type="button" class ="navitem headerstuff" id="navbar-friend-button"><i class="fa fa-users"></i></button></li>
@@ -52,7 +74,7 @@
         </div>
 
         <div class="row" id="imagesContainer">
-		
+
         <div class="entire-post">
           <div class="post-header">
             <div class="user-icon">
@@ -73,7 +95,7 @@
             </div>
           </div>
         </div>
-		
+
 		  <div class="entire-post">
           <div class="post-header">
             <div class="user-icon">
@@ -82,7 +104,7 @@
             <p class="user-name">
               <a href="#">Eugene</a>
             </p>
-          </div> 
+          </div>
 		  <div class="post-content">
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/LARGE_elevation.jpg">
 			</div>
