@@ -342,3 +342,11 @@ body::-webkit-scrollbar-thumb {
   margin: 10px;
   margin-left: 0px;
 }
+
+/* 404 error container */
+
+.error-container{
+margin: 100px;
+text-align: center;
+
+}
