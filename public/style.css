@@ -5,13 +5,14 @@
 
 
 /*LINKS ------------------------------------------------*/
-a{
-	text-decoration: none;
-	color: black;
+a, a:link, a:visited {
+  color: white;
+  text-decoration: none;
 }
 
-a:hover{
-	color: #319DF6;
+a:hover, a:active{
+	color: orange;
+	text-decoration: none;
 }
 
 
@@ -137,7 +138,7 @@ header{
 .entire-post {
     position: static;
     width: 40%;
-    height: 500px;
+    height: 470px;
     border: 1px solid black;
     border-radius: 5px;
     background-color: black;
@@ -156,12 +157,13 @@ header{
 .user-icon {
   display: inline-block;
   color: white;
+	margin-right: 5px;
 }
 
 .user-name {
   display: inline-block;
-  text-decoration: none;
-  color: black;
+  color: white;
+	text-decoration: none;
 }
 
 img{
@@ -174,7 +176,6 @@ img{
     width: 95%;
 	height: 327px;
 	margin: auto;
-	margin-top: 5%;
 	border-top: 2px solid white;
 	border-bottom: 2px solid white;
 	padding: 10px;
@@ -222,4 +223,46 @@ img{
 #post-like-button:focus {
 	border: 0;
 	outline: 0;
+}
+
+/* scroll bar custom */
+body::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0.0);
+  width: 10px;
+  overflow-y:hidden;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Uploadcare widget customize */
+.uploadcare--widget__button{
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	height: 60px;
+	width: 60px;
+	border: none;
+	border-radius: 30px;
+	font-size: 35px;
+	color: black;
+	cursor: pointer;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	background-image:url("benny.jpg");
+}
+
+.uploadcare--widget__button:hover,
+.uploadcare--widget__button:focus {
+  font-size: 35px;
+	background-image:url("benny.jpg");
+	text-align: center;
+	transform: scale(1.1);
+}
+
+.uploadcare--widget__button:focus {
+  outline: none;
 }
