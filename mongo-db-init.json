@@ -31,7 +31,8 @@
         "profileIcon": "fa fa-user",
         "description": "More cute kitty from Derek",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   },
@@ -70,7 +71,8 @@
         "profileIcon": "fa fa-user",
         "description": "More cute kitty Eugene",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   },
@@ -109,7 +111,8 @@
         "profileIcon": "fa fa-user",
         "description": "More cute kitty from Tyler",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   },
@@ -148,7 +151,8 @@
         "profileIcon": "fa fa-user",
         "description": "More cute kitty from Isaac",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   }
