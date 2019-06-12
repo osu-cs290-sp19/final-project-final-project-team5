@@ -3,23 +3,22 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
-var data = require('./mongo-db-init');
 
 var app = express();
 var port = process.env.PORT || 8930;
 
-var mongoHost = process.env.MONGO_HOST;
-var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.env.MONGO_USER;
-var mongoPassword = process.env.MONGO_PASSWORD;
-var mongoDBName = process.env.MONGO_DB_NAME;
-/*
+// var mongoHost = process.env.MONGO_HOST;
+// var mongoPort = process.env.MONGO_PORT || 27017;
+// var mongoUser = process.env.MONGO_USER;
+// var mongoPassword = process.env.MONGO_PASSWORD;
+// var mongoDBName = process.env.MONGO_DB_NAME;
+
 var mongoHost = "classmongo.engr.oregonstate.edu";
 var mongoPort = 27017;
 var mongoUser = "cs290_martiisa";
 var mongoPassword = "SickoMode123";
 var mongoDBName = "cs290_martiisa";
-*/
+
 console.log("Host: " + mongoHost);
 console.log("Port: " + mongoPort);
 console.log("User: " + mongoUser);
@@ -140,7 +139,7 @@ app.post('/:person/Like', function (req, res, next) {
 });
 
 app.get('*', function (req, res, next){
-  res.status(404).sendFile(__dirname + '/public/404.html');
+  res.status(404).render('404', {error: "404 Error", msg: "Whoops, something went wrong over here!"});
 });
 
 MongoClient.connect(mongoUrl, {useNewUrlParser: true}, function(err, client){
