@@ -3,35 +3,36 @@
     "userName": "derek",
     "photos": [
       {
-        "userName": "Derek",
+        "userName": "derek",
         "profileIcon": "fa fa-user",
         "description": "Derek's Cute kitty",
         "url": "http://placekitten.com/200/300",
         "like": [{
-          "userName": "Eugene"
+          "userName": "eugene"
           }
         ],
         "comments": [
           {
-            "userName": "Eugene",
+            "userName": "eugene",
             "comment": "Wow!"
           },
           {
-            "userName": "Tyler",
+            "userName": "tyler",
             "comment": "..."
           },
           {
-            "userName": "Issac",
+            "userName": "isaac",
             "comment": "..."
           }
         ]
       },
       {
-        "userName": "Derek",
+        "userName": "derek",
         "profileIcon": "fa fa-user",
         "description": "More cute kitty from Derek",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   },
@@ -39,38 +40,39 @@
     "userName": "eugene",
     "photos": [
       {
-        "userName": "Eugene",
+        "userName": "eugene",
         "profileIcon": "fa fa-user",
         "description": "Eugene's Cute kitty",
         "url": "http://placekitten.com/200/300",
         "like": [{
-          "userName": "Derek"
+          "userName": "derek"
           },
           {
-            "userName": "Tyler"
+            "userName": "tyler"
           }
         ],
         "comments": [
           {
-            "userName": "Derek",
+            "userName": "derek",
             "comment": "Wow!"
           },
           {
-            "userName": "Tyler",
+            "userName": "tyler",
             "comment": "..."
           },
           {
-            "userName": "Issac",
+            "userName": "isaac",
             "comment": "..."
           }
         ]
       },
       {
-        "userName": "Eugene",
+        "userName": "eugene",
         "profileIcon": "fa fa-user",
         "description": "More cute kitty Eugene",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   },
@@ -78,38 +80,39 @@
     "userName": "tyler",
     "photos": [
       {
-        "userName": "Tyler",
+        "userName": "tyler",
         "profileIcon": "fa fa-user",
         "description": "Tyler's Cute kitty",
         "url": "http://placekitten.com/200/300",
         "like": [{
-            "userName": "Eugene"
+            "userName": "eugene"
           },
           {
-            "userName": "Isaac"
+            "userName": "isaac"
           }
         ],
         "comments": [
           {
-            "userName": "Eugene",
+            "userName": "eugene",
             "comment": "Wow!"
           },
           {
-            "userName": "Derek",
+            "userName": "derek",
             "comment": "..."
           },
           {
-            "userName": "Issac",
+            "userName": "isaac",
             "comment": "..."
           }
         ]
       },
       {
-        "userName": "Tyler",
+        "userName": "tyler",
         "profileIcon": "fa fa-user",
         "description": "More cute kitty from Tyler",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   },
@@ -117,15 +120,15 @@
     "userName": "isaac",
     "photos": [
       {
-        "userName": "Isaac",
+        "userName": "isaac",
         "profileIcon": "fa fa-user",
         "description": "Isaac's Cute kitty",
         "url": "http://placekitten.com/200/300",
         "like": [{
-            "userName": "Eugene"
+            "userName": "eugene"
           },
           {
-            "userName": "Derek"
+            "userName": "derek"
           }
         ],
         "comments": [
@@ -144,11 +147,12 @@
         ]
       },
       {
-        "userName": "Isaac",
+        "userName": "isaac",
         "profileIcon": "fa fa-user",
         "description": "More cute kitty from Isaac",
         "url": "http://placekitten.com/200/300",
-        "comment": []
+        "like": [],
+        "comments": []
       }
     ]
   }
