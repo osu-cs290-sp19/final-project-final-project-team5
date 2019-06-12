@@ -135,7 +135,7 @@ app.post('/:person/Like', function (req, res, next) {
                       }
                     );
             }
-        });      
+        });
     }
 });
 
@@ -143,10 +143,10 @@ app.get('*', function (req, res, next){
   res.status(404).sendFile(__dirname + '/public/404.html');
 });
 
- MongoClient.connect(mongoUrl, function(err, client){
-   if(err){
-     throw err;
-   }
+MongoClient.connect(mongoUrl, {useNewUrlParser: true}, function(err, client){
+  if(err){
+    throw err;
+  }
    db = client.db(mongoDBName);
   app.listen(port, function () {
     console.log("== Server is listening on port", port);
